@@ -1,12 +1,12 @@
-const express = require("express");
-const app = express();
+const http = require('http');
 
+// ✅ Define PORT correctly
+const PORT = process.env.PORT || 3000;
 
-
-app.get("/", (req, res) => {
-    res.send("🚀 Deployed using Jenkins Pipeline on EC2!");
+const server = http.createServer((req, res) => {
+    res.end("Hello from Render Deployment!");
 });
 
-app.listen(3000, () => {
+server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
