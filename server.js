@@ -1,6 +1,5 @@
 const http = require('http');
 
-// ✅ Define PORT correctly
 const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
